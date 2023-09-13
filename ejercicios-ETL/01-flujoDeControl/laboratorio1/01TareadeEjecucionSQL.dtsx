@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="01TareadeEjecucionSQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{F7EB4CAE-1856-4093-9243-00F2864442F5}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{1166E79D-04B1-4F3D-B68E-0729AB383636}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -151,14 +151,18 @@
         <NodeLayout
           Size="288,41.6"
           Id="Package\Actualizar la tabla a customer por customerID"
-          TopLeft="144.99999207755,25.1333331585593" />
+          TopLeft="382.499979101123,30.3333331223992" />
+        <NodeLayout
+          Size="267.2,41.6"
+          Id="Package\Actualizar tabla Customer con parametro"
+          TopLeft="391.666645266945,245.266664961113" />
         <NodeLayout
           Size="183.2,41.6"
           Id="Package\Obtener el costumerID"
-          TopLeft="194.099994946023,142.133332344956" />
+          TopLeft="431.599981969596,147.333332308796" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="287.349993511786,66.7333331585593">
+          TopLeft="524.849980535359,71.9333331223991">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -178,13 +182,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="267.2,41.6"
-          Id="Package\Actualizar tabla Customer con parametro"
-          TopLeft="154.166658243372,240.066664997273" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="286.733326594697,183.733332344956">
+          TopLeft="524.23331361827,188.933332308796">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
