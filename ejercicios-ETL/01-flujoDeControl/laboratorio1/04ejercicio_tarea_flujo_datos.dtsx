@@ -1,0 +1,884 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/13/2023 6:06:36 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-8273A1E"
+  DTS:CreatorName="DESKTOP-8273A1E\anton"
+  DTS:DTSID="{F164204F-C7E7-46C1-8189-0C1D9115F9F0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5228.0"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="ejercicio_tarea_flujo_datos"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{34BCF27D-FCA7-4F8E-A8D7-EBB9FBF21214}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1E763894-B91A-423F-BD1F-9EF243AC4E5B}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\anton\Documents\INTELIGENCIA DE NEGOCIOS\BI\ejercicios-ETL\01-flujoDeControl\02-TareaDeFlujoDeDatos\WorldCups.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{DC9C1561-3BB6-4F22-AF3E-18917E0C39C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{2408C9FF-3CD5-47DA-B040-4B25CCAE77CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Winner"
+              DTS:DTSID="{6F63A610-7CCF-4F86-995C-0910603A1BB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Runners-Up"
+              DTS:DTSID="{66E1A7F4-E723-48E2-A099-648ACCECFC94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Third"
+              DTS:DTSID="{05E8A6E3-2705-48D0-BC42-7836C908C4F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fourth"
+              DTS:DTSID="{B4B8C0C0-BE64-4D4E-9317-B55F86F409CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GoalsScored"
+              DTS:DTSID="{B787BE27-38E2-45FE-B23D-5912A88B236B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QualifiedTeams"
+              DTS:DTSID="{F1BA181F-FC5B-4AF2-BA79-554063010230}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MatchesPlayed"
+              DTS:DTSID="{DA3F1C04-CA63-42D2-A1C5-D8A96A9BF2A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Attendance"
+              DTS:DTSID="{F7DB45ED-8DE7-4FDC-9D0C-55B6784FB137}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.FiFA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{457E56E9-5EB8-46BE-B866-9BC818BE75F1}"
+      DTS:ObjectName="LocalHost.FiFA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=FiFA;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-ejercicio_tarea_flujo_datos-{457E56E9-5EB8-46BE-B866-9BC818BE75F1}LocalHost.FiFA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CARGAR EXCEL A BASE DE DATOS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A973FFDA-CA6C-4B95-8A38-7BAE4D79EF47}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CARGAR EXCEL A BASE DE DATOS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2058"
+              name="csv WorldCups"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Winner]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Winner]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Winner]"
+                      name="Winner"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Runners-Up]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Runners-Up]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Runners-Up]"
+                      name="Runners-Up"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Third]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Third]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Third]"
+                      name="Third"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Fourth]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Fourth]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Fourth]"
+                      name="Fourth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[GoalsScored]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[GoalsScored]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[GoalsScored]"
+                      name="GoalsScored"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[QualifiedTeams]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[QualifiedTeams]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[QualifiedTeams]"
+                      name="QualifiedTeams"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[MatchesPlayed]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[MatchesPlayed]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[MatchesPlayed]"
+                      name="MatchesPlayed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Attendance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Attendance]"
+                      length="50"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Attendance]"
+                      name="Attendance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Winner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Winner" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Runners-Up]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Runners-Up" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Third]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Third" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Fourth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Fourth" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[GoalsScored]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GoalsScored" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[QualifiedTeams]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="QualifiedTeams" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[MatchesPlayed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MatchesPlayed" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].ExternalColumns[Attendance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Attendance" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Tabla FiFA"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[worldCups]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.FiFA]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.FiFA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Winner]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Winner"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Winner]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Winner]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Third]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Third"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Third]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Third]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Fourth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Fourth"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Fourth]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Fourth]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[GoalsScored]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GoalsScored"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[GoalsScored]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[GoalsScored]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[MatchesPlayed]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MatchesPlayed"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[MatchesPlayed]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[MatchesPlayed]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Attendance]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Attendance"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Attendance]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Attendance]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[Runners-Up]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Runners-Up"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[RunnersUp]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[Runners-Up]" />
+                    <inputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].Columns[QualifiedTeams]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="QualifiedTeams"
+                      externalMetadataColumnId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[QualifiedTeams]"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output].Columns[QualifiedTeams]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Winner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Winner" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[RunnersUp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="RunnersUp" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Third]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Third" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Fourth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Fourth" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[GoalsScored]"
+                      dataType="i4"
+                      name="GoalsScored" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[MatchesPlayed]"
+                      dataType="i4"
+                      name="MatchesPlayed" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[Attendance]"
+                      dataType="r8"
+                      name="Attendance" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input].ExternalColumns[QualifiedTeams]"
+                      dataType="i4"
+                      name="QualifiedTeams" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CARGAR EXCEL A BASE DE DATOS.Paths[Flat File Source Output]"
+              endId="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Limpiar tabla"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{3ABF5018-F4ED-4ED6-B0F8-E8E962A772E8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpiar tabla"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{457E56E9-5EB8-46BE-B866-9BC818BE75F1}"
+          SQLTask:SqlStatementSource="truncate table worldsCup" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{DD90D7C0-3F18-4E66-A6A6-C56BEC572681}"
+      DTS:From="Package\Limpiar tabla"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\CARGAR EXCEL A BASE DE DATOS" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="256,41.6"
+          Id="Package\CARGAR EXCEL A BASE DE DATOS"
+          TopLeft="366.666646632884,139.533332363036" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Limpiar tabla"
+          TopLeft="399.999978144964,49.3999996564786" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="468.799978144964,90.9999996564786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.8666684879195,48.5333327065574"
+              Start="0,0"
+              End="25.8666684879195,41.0333327065574">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2666663532787" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2666663532787"
+                    Point2="0,24.2666663532787"
+                    Point3="4,24.2666663532787" />
+                  <mssgle:LineSegment
+                    End="21.8666684879195,24.2666663532787" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.8666684879195,24.2666663532787"
+                    Point2="25.8666684879195,24.2666663532787"
+                    Point3="25.8666684879195,28.2666663532787" />
+                  <mssgle:LineSegment
+                    End="25.8666684879195,41.0333327065574" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CARGAR EXCEL A BASE DE DATOS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA"
+          TopLeft="386.666645540132,239.199998336633" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\CARGAR EXCEL A BASE DE DATOS\csv WorldCups"
+          TopLeft="379.999979237716,113.599999349117" />
+        <EdgeLayout
+          Id="Package\CARGAR EXCEL A BASE DE DATOS.Paths[Flat File Source Output]"
+          TopLeft="452.733312388924,155.199999349117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83.9999989875157"
+              Start="0,0"
+              End="0,76.4999989875157">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.4999989875157" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGAR EXCEL A BASE DE DATOS\Tabla FiFA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

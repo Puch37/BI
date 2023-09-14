@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="02-Tarea de Flujo de Datos"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{A51740E8-EB24-4D4F-8CF3-B95D94B6D5DB}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{A70A2597-8455-4C0B-B809-92EBF41D596F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -698,25 +698,25 @@
         <NodeLayout
           Size="173.6,41.6"
           Id="Package\CARGAR TABLA CUSTOMER A ARCHIVO DE TEXTO\TABLA CUSTOMER"
-          TopLeft="459.999974866709,68.466666190558" />
+          TopLeft="463.333308017917,65.8666662086381" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\CARGAR TABLA CUSTOMER A ARCHIVO DE TEXTO\Reporte de Clientes"
           TopLeft="462.499974730115,164.666665521595" />
         <EdgeLayout
           Id="Package\CARGAR TABLA CUSTOMER A ARCHIVO DE TEXTO.Paths[OLE DB Source Output]"
-          TopLeft="547.249974798412,110.066666190558">
+          TopLeft="548.916641374016,107.466666208638">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.5999993310372"
+              EndConnector="0,57.1999993129571"
               Start="0,0"
-              End="0,47.0999993310372">
+              End="0,49.6999993129571">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.0999993310372" />
+                    End="0,49.6999993129571" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
